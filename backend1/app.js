@@ -43,7 +43,11 @@ app.use("/api/v1",payment);
 
 //Middleware for errors
 app.use(errorMiddleware);
-app.use(cors());
+app.use(cors(
+    {origin:["https://finalmern2.vercel.app/"],
+     methods:["POST","GET"],
+     credentials:true
+    }));
 app.use(bodyParser.json());
 
 // New route for price prediction
