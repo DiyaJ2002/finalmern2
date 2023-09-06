@@ -16,7 +16,7 @@ export const getProduct =
     try {
       dispatch({ type: ALL_PRODUCT_REQUEST });
 
-      const { data } = await axios.get("api/v1/products");
+      const { data } = await axios.get("https://finalmern12.onrender.com/products");
 
       dispatch({
         type: ALL_PRODUCT_SUCCESS,
@@ -34,7 +34,7 @@ export const getProductDetails = (id) => async (dispatch) => {
   try {
     dispatch({ type: PRODUCT_DETAILS_REQUEST });
 
-    const { data } = await axios.get(`api/v1/${id}`);
+    const { data } = await axios.get(`https://finalmern12.onrender.com/${id}`);
 
     dispatch({
       type: PRODUCT_DETAILS_SUCCESS,
