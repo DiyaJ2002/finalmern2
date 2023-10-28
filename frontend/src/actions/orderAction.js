@@ -19,7 +19,7 @@ export const createOrder = (order) => async (dispatch,getState) => {
           "Content-Type": "application/json",
         },
       };
-      const { data } = await axios.post("https://finalmern12.onrender.com/order/new", order, config);
+      const { data } = await axios.post("https://finalmern16.onrender.com/order/new", order, config);
   
     dispatch({ type: CREATE_ORDER_SUCCESS, payload: data });
     } catch (error) {
